@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Instamojo Payment Gateway</h1>
+    <form action="/pay" method="POST">
+      <input type="hidden" name="data_name" value="Vipul Malakar" />
+      <input
+        type="hidden"
+        name="data_email"
+        value="vipul.malakar@poulimainfo.tech"
+      />
+      <input type="hidden" name="data_amount" value="10" />
+      <input type="submit" value="Pay Now" />
+    </form>
+
+    <!-- <form action="/saveTransaction" method="POST">
+      <div className="mb-4">
+        <label className="me-4 h6" for="name"> Name:{" "} </label>
+        <input className="px-2 py-1 border-0" type="hidden" name="name" placeholder="write your name" value="Vipul">
+      </div>
+      <div className="mb-4">
+        <label className="me-4 h6" for="email"> Email:{" "} </label>
+        <input className="px-2 py-1 border-0" type="hidden" name="email" placeholder="write your email" value="vipul@gmail.com"/>
+      </div>
+      <div className="mb-4">
+        <label className="me-4 h6" for="amount"> Amount: </label>
+        <input className="px-2 py-1 border-0" type="hidden" name="amount" value="10"/>
+      </div>
+      <div className="mb-4">
+        <label className="me-4 h6" for="paymentId"> Payment ID: </label>
+        <input className="px-2 py-1 border-0" type="hidden" name="paymentId" value="1234" />
+      </div>
+      <div className="mb-4">
+        <label className="me-4 h6" for="paymentRequestId">
+          Payment Request Id:
+        </label>
+        <input className="px-2 py-1 border-0" type="hidden" name="paymentRequestId" value="325" />
+      </div>
+      <div className="mb-4">
+        <label className="me-4 h6" for="status"> Status: </label>
+        <input className="px-2 py-1 border-0" type="hidden" name="status" value="success" />
+      </div>
+
+      <input className="btn btn-dark" type="submit" value="Post Now" />
+    </form> -->
+  </body>
+</html>

@@ -15,6 +15,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,6 +25,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- bootstrap 5 css  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>React App</title>
   </head>
   <body>
@@ -39,5 +47,84 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- bootstrap 5 js  -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- carousel js  -->
+    <script>
+      $(".carousel").swipe({
+        swipe: function (
+          event,
+          direction,
+          distance,
+          duration,
+          fingerCount,
+          fingerData
+        ) {
+          if (direction == "left") $(this).carousel("next");
+          if (direction == "right") $(this).carousel("prev");
+        },
+        allowPageScroll: "vertical",
+      });
+    </script>
+
+    <!-- instamojo script  -->
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <!-- <script>
+      Instamojo.configure({
+        directPaymentMode: "net banking",
+      });
+    </script> -->
+
+    <script>
+      /* Start client-defined Callback Handler Functions */
+      function onOpenHandler() {
+        alert("Payments Modal is Opened");
+      }
+
+      function onCloseHandler() {
+        alert("Payments Modal is Closed");
+      }
+
+      function onPaymentSuccessHandler(response) {
+        alert("Payment Success");
+        console.log("Payment Success Response", response);
+      }
+
+      function onPaymentFailureHandler(response) {
+        alert("Payment Failure");
+        console.log("Payment Failure Response", response);
+      }
+      /* End client-defined Callback Handler Functions */
+
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          onOpen: onOpenHandler,
+          onClose: onCloseHandler,
+          onSuccess: onPaymentSuccessHandler,
+          onFailure: onPaymentFailureHandler,
+        },
+      });
+
+      function onButtonClick() {
+        Instamojo.open("http://www.instamojo.com/@ayushya");
+      }
+    </script>
   </body>
 </html>

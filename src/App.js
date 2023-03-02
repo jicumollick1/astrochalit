@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TermsAndCondition from "./components/TermsAndCondition";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import Payment from "./components/Payment";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ background: "#F0EAD5" }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route
+            path="/terms"
+            element={<TermsAndCondition></TermsAndCondition>}
+          ></Route>
+          <Route
+            path="/privacy"
+            element={<PrivacyPolicy></PrivacyPolicy>}
+          ></Route>
+          <Route path="/payment/:type" element={<Payment></Payment>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
