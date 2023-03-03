@@ -287,7 +287,7 @@ const GlobalModal = ({ title, link }) => {
         className="text-white h5 text-decoration-none"
         onClick={openModal}
       >
-        <button className="btn btn-dark">{title}</button>
+        <button className="btn btn-dark w-100">{link}</button>
       </a>
       <Modal
         isOpen={modalIsOpen}
