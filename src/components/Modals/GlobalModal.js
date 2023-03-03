@@ -222,7 +222,7 @@ const GlobalModal = ({ title, link }) => {
     // calling the api
     axios
       .post(
-        "https://pdf.astrologyapi.com/v1/basic_horoscope_pdf",
+        "https://pdf.astrologyapi.com/v1/mini_horoscope_pdf",
         {
           name: e.target.firstName.value,
           gender: e.target.gender.value,
@@ -251,7 +251,7 @@ const GlobalModal = ({ title, link }) => {
         {
           headers: {
             Authorization:
-              "Basic NDU0NTpCeVZPSWFPREg1N1FSVmk2Q3Fzd0hYR2xjcER2ajd0WkJSb29yWQ==",
+              "Basic NjIyNDU0OmM2YTZmMjdlNmU3ODViNWZjYzUyNjlkZjlmMGMyOGM5",
           },
         }
       )
@@ -297,7 +297,7 @@ const GlobalModal = ({ title, link }) => {
         title="jiku"
       >
         <div
-          className="p-5"
+          className="py-5"
           style={{
             position: "relative",
           }}

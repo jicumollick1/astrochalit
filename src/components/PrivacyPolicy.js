@@ -42,10 +42,10 @@ const PrivacyPolicy = () => {
             <div className=" col-md-6 text-light my-auto">
               <h2 style={{ fontFamily: "Hagatta" }}>Get 50 % OFF </h2>
               <p className="my-4" style={{ fontFamily: "Lora" }}>
-                Get All Your Astrological Data in PDF Format EMAILED to You
-                Within 24 Hours!
+              Download All Your Astrological Data in PDF Format Instantly!
               </p>
               <button
+                onClick={() => window.location.href = "https://www.astrochalit.com/"}
                 className="btn text-light"
                 style={{
                   background: "#E3B773",
@@ -82,21 +82,21 @@ const PrivacyPolicy = () => {
         <div className="row">
           <div>
             <h4 className="my-5">
-              Privacy Policy for Vedic Rishi Astro Solutions Private Limited
+              Privacy Policy for Poulima Infotech Private Limited
             </h4>
             <p>
-              Vedic Rishi Astro Solutions Private Limited built the Kundli -
+              Poulima Infotech Private Limited built the Kundli -
               Astrology and Horoscope app as a Freemium app as well as web app
-              running at https://vedicrishi.in. This SERVICE is provided by
-              Vedic Rishi Astro Solutions Private Limited at no cost and is
+              running at https://www.poulimainfo.tech/ This SERVICE is provided by
+              Poulima Infotech Private Limited at no cost and is
               intended for use as is.
             </p>
             <p>
-              At Vedic Rishi, accessible from Kundli - Astrology and Horoscope
-              android app as well as https://vedicrishi.in website, one of our
+              At Poulima Infotech, accessible from Kundli - Astrology and Horoscope
+              android app as well as https://www.poulimainfo.tech/ website, one of our
               main priorities is the privacy of our visitors. This Privacy
               Policy document contains types of information that is collected
-              and recorded by Vedic Rishi and how we use it.
+              and recorded by Poulima Infotech and how we use it.
             </p>
             <p>
               If you have additional questions or require more information about
@@ -105,7 +105,7 @@ const PrivacyPolicy = () => {
             <p>
               This Privacy Policy applies only to our online activities and is
               valid for visitors to our android app and website with regards to
-              the information that they shared and/or collect in Vedic Rishi.
+              the information that they shared and/or collect in Poulima Infotech.
             </p>
           </div>
           <div>
@@ -162,7 +162,7 @@ const PrivacyPolicy = () => {
           <div>
             <h4 className="my-4">Log Files</h4>
             <p>
-              Vedic Rishi follows a standard procedure of using log files. These
+              Poulima Infotech follows a standard procedure of using log files. These
               files log visitors when they visit websites. All hosting companies
               do this and a part of hosting services' analytics. The information
               collected by log files include internet protocol (IP) addresses,
@@ -177,7 +177,7 @@ const PrivacyPolicy = () => {
           <div>
             <h4 className="my-4">Cookies and Web Beacons</h4>
             <p>
-              Like any other website, Vedic Rishi uses 'cookies'. These cookies
+              Like any other website, Poulima Infotech uses 'cookies'. These cookies
               are used to store information including visitors' preferences, and
               the pages on the website that the visitor accessed or visited. The
               information is used to optimize the users' experience by
@@ -189,22 +189,22 @@ const PrivacyPolicy = () => {
             <h4 className="my-4">Advertising Partners Privacy Policies</h4>
             <p>
               You may consult this list to find the Privacy Policy for each of
-              the advertising partners of Vedic Rishi. Third-party ad servers or
+              the advertising partners of Poulima Infotech. Third-party ad servers or
               ad networks uses technologies like cookies, JavaScript, or Web
               Beacons that are used in their respective advertisements and links
-              that appear on Vedic Rishi, which are sent directly to users'
+              that appear on Poulima Infotech, which are sent directly to users'
               browser. They automatically receive your IP address when this
               occurs. These technologies are used to measure the effectiveness
               of their advertising campaigns and/or to personalize the
               advertising content that you see on websites that you visit. Note
-              that Vedic Rishi has no access to or control over these cookies
+              that Poulima Infotech has no access to or control over these cookies
               that are used by third-party advertisers.
             </p>
           </div>
           <div>
             <h4 className="my-4">Third Party Privacy Policies</h4>
             <p>
-              Vedic Rishi's Privacy Policy does not apply to other advertisers
+              Poulima Infotech's Privacy Policy does not apply to other advertisers
               or websites. Thus, we are advising you to consult the respective
               Privacy Policies of these third-party ad servers for more detailed
               information. It may include their practices and instructions about
@@ -223,7 +223,7 @@ const PrivacyPolicy = () => {
               CCPA Privacy Rights (Do Not Sell My Personal Information)
             </h4>
             <p>
-              Vedic Rishi's Privacy Policy does not apply to other advertisers
+              Poulima Infotech's Privacy Policy does not apply to other advertisers
               or websites. Thus, we are advising you to consult the respective
               Privacy Policies of these third-party ad servers for more detailed
               information. It may include their practices and instructions about
@@ -312,14 +312,14 @@ const PrivacyPolicy = () => {
               activity.
             </p>
             <p>
-              Vedic Rishi does not knowingly collect any Personal Identifiable
+              Poulima Infotech does not knowingly collect any Personal Identifiable
               Information from children under the age of 13. If you think that
               your child provided this kind of information on our website, we
               strongly encourage you to contact us immediately and we will do
               our best efforts to promptly remove such information from our
               records.
             </p>
-            <p>Last updated date - 20 December 2021</p>
+            <p>Last updated date - March 1, 2023</p>
           </div>
         </div>
       </div>
