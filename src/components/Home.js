@@ -148,7 +148,7 @@ const Home = () => {
             bgColor="#25262B"
             color="#fff"
           />
-          <Report
+          {/* <Report
             img={report2}
             title="Basic Horoscope Report"
             description="This will be a condensed version of a full horoscope reading, providing only a summary of the key predictions for your zodiac sign. This 10 page report* will cover all the basic astrological details, panchanga details, planetary positions, horoscope charts like lagna chart, moon chart, navamsa chart, vimshottari dasha levels I & II. This will be a simple summary of your report. "
@@ -178,7 +178,7 @@ const Home = () => {
             btnBg="#25262B"
             bgColor="#E3B773"
             color="#25262B"
-          />
+          /> */}
           <img
             src={pricingBgBottom}
             className="img-fluid d-block col-md-8 mx-auto"

@@ -6,6 +6,7 @@ import bg from "../../assets/Popup assets/WEBP/Group 11-svg.webp";
 import { useState, useEffect } from "react";
 import countriesData from "./countries.json";
 import { encode as btoa } from "base-64";
+import Brief_Horoscope from "./Brief_Horoscope.pdf";
 
 const GlobalModal = ({ title, link }) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
@@ -262,20 +263,31 @@ const GlobalModal = ({ title, link }) => {
         //     replace: true,
         //   }
         // );
-        window.location.replace(
-          "https://pdf.astrologyapi.com/download/sample/44d819f0-62e7-11e7-9528-39ad67eac463.pdf"
-        );
+        // window.location.replace(
+        //   "https://pdf.astrologyapi.com/download/sample/44d819f0-62e7-11e7-9528-39ad67eac463.pdf"
+        // );
+        fetch(Brief_Horoscope).then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Horoscope.pdf';
+                alink.click();
+            })
+        })
       })
       .then((error) => console.log(error));
   };
   return (
-    <li className="mt-3">
+    <li className="mt-3" style={{listStyle:'none'}}>
       <a
         href="#!"
         className="text-white h5 text-decoration-none"
         onClick={openModal}
       >
-        {link}
+        <button className="btn btn-dark">{title}</button>
       </a>
       <Modal
         isOpen={modalIsOpen}
@@ -361,8 +373,10 @@ const GlobalModal = ({ title, link }) => {
                         className="form-select bg-transparent "
                         aria-label="Default select example"
                         style={{ border: "1px solid #25262B" }}
+                        name="date"
+                        required
                       >
-                        <option defaultValue={"1"}>Date</option>
+                        <option value=''>Date</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -1447,12 +1461,12 @@ const GlobalModal = ({ title, link }) => {
           </div>
           <div className="row mt-5">
             <div className="mx-auto">
-              <button
+              {/* <button
                 className="bg-dark text-light col-md-4 d-block mx-auto py-2"
                 style={{ fontFamily: "Hagatta" }}
               >
                 Pay Now
-              </button>
+              </button> */}
               <button
                 type="submit"
                 className="mt-4 bg-dark text-light col-md-4 d-block mx-auto py-2"
