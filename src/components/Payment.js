@@ -5,10 +5,11 @@ import * as Yup from "yup";
 import styled from "styled-components";
 import logo from "../assets/WEBP/astrochalit logo-svg.webp";
 import heroImg from "../assets/WEBP/Group 11-svg.webp";
+import Loader from "./Loader";
 
 const Payment = () => {
   const { type } = useParams();
-
+  const [showLoader, setShowLoader] = React.useState(false);
   const Amount = type === "brief horoscope report"? 99 : type === "basic horoscope report"? 149 : type === "premium horoscope report"? 499 : 299;
 
   const validationSchema = Yup.object().shape({
@@ -19,7 +20,11 @@ const Payment = () => {
   });
 
   const handlePayment = async (values) => {
-    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/pay`, {
+    setShowLoader(true);
+    setTimeout(() => {
+      setShowLoader(false);
+    }, 10000);
+    const response = await fetch(`https://astrochalit-server.onrender.com/pay`, {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -100,6 +105,7 @@ const Payment = () => {
                   >
                     Pay Now
                   </button>
+                  <Loader show={showLoader} />
                 </div>
               </form>
             )}

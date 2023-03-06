@@ -13,9 +13,9 @@ const PaymentDetails = () => {
     const payment_request_id = queryParameters.get("payment_request_id")
     useEffect(() => {
         getTransactionDetails();
-    }, [])
+    }, [payment_id])
     const getTransactionDetails = async () => {
-        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/getTransactionDetails`, {
+        const response = await fetch(`https://astrochalit-server.onrender.com/getTransactionDetails`, {
           method: "POST", // or 'PUT'
           headers: {
             "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const PaymentDetails = () => {
           body: JSON.stringify({payment_id: payment_id}),
         });
         const data = await response.json();
-        setData(data.data);
+        setData(data?.data);
     }
 
     return (
@@ -41,23 +41,23 @@ const PaymentDetails = () => {
                 <StyledTable>
                   <StyledTableTr>
                     <StyledTableTd>Name</StyledTableTd>
-                    <StyledTableTd>{data.name}</StyledTableTd>
+                    <StyledTableTd>{data?.name}</StyledTableTd>
                   </StyledTableTr>
                   <StyledTableTr>
                     <StyledTableTd>Email</StyledTableTd>
-                    <StyledTableTd>{data.email}</StyledTableTd>
+                    <StyledTableTd>{data?.email}</StyledTableTd>
                   </StyledTableTr>
                   <StyledTableTr>
                     <StyledTableTd>Mobile Number</StyledTableTd>
-                    <StyledTableTd>{data.phone}</StyledTableTd>
+                    <StyledTableTd>{data?.phone}</StyledTableTd>
                   </StyledTableTr>
                   <StyledTableTr>
                     <StyledTableTd>Amount</StyledTableTd>
-                    <StyledTableTd>{data.amount}</StyledTableTd>
+                    <StyledTableTd>{data?.amount}</StyledTableTd>
                   </StyledTableTr>
                   <StyledTableTr>
                     <StyledTableTd>Payment Mode</StyledTableTd>
-                    <StyledTableTd>{data.instrument_type}</StyledTableTd>
+                    <StyledTableTd>{data?.instrument_type}</StyledTableTd>
                   </StyledTableTr>
                   <StyledTableTr>
                     <StyledTableTd>Payment Id</StyledTableTd>
@@ -69,11 +69,11 @@ const PaymentDetails = () => {
                   </StyledTableTr>
                   <StyledTableTr>
                     <StyledTableTd>Payment Status</StyledTableTd>
-                    <StyledTableTd className={`fw-bold text-${data.status?'success':'danger'}`}>{data.status?'Success':'Failed'}</StyledTableTd>
+                    <StyledTableTd className={`fw-bold text-${data?.status?'success':'danger'}`}>{data?.status?'Success':'Failed'}</StyledTableTd>
                   </StyledTableTr>
                 </StyledTable>
                 <div className="py-3">
-                    <span className={`fw-bold text-${data.status?'success':'danger'}`}>This payment receipt is sent to your email. Please check your mail.</span>
+                    <span className={`fw-bold text-${data?.status?'success':'danger'}`}>This payment receipt is sent to your email. Please check your mail.</span>
                     <GlobalModal link={"Download Your Horoscope Report"} title={"Get Your Brief Horoscope Report"} />
                 </div>
             </StyledLeftContainer>
@@ -87,7 +87,7 @@ const PaymentDetails = () => {
                     <span style={{color:'#DBC087'}}>Brief Horoscope Report</span>
                     <div className="d-flex justify-content-between gap-5">
                       <span>Total Price</span>
-                      <span style={{fontSize:'1.5rem',}}>&#8377; {data.amount}</span>
+                      <span style={{fontSize:'1.5rem',}}>&#8377; {data?.amount}</span>
                     </div>
                     <div className="d-flex justify-content-between gap-2">
                         <GoVerified style={{fontSize:'1.5rem', color:'#44D36C'}} />
@@ -97,7 +97,7 @@ const PaymentDetails = () => {
               </StyledRightMiddleContainer>
               <div className="d-flex justify-content-between align-items-center px-3 py-2" style={{backgroundColor:'#DBC087',borderRadius:'1rem'}}>
                 <span style={{fontSize:'1.5rem'}}>Total Payment</span>
-                <span style={{fontSize:'2rem'}}>&#8377; {data.amount}</span>
+                <span style={{fontSize:'2rem'}}>&#8377; {data?.amount}</span>
               </div>
             </StyledRightContainer>
           </StyledContainer>

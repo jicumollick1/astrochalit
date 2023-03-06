@@ -246,10 +246,10 @@ const Home = () => {
       </div>
 
       {/* Customer says section  */}
-      <div className="customers bg-dark">
+      {/* <div className="customers bg-dark">
         <div className="container">
           <div className="row">
-            {/* carousel  */}
+            carousel 
             <div className="container">
               <h3 className="text-center text-uppercase text-light mt-5">
                 What Our Customers are Saying
@@ -278,11 +278,11 @@ const Home = () => {
                     </ol>
                     <div className="carousel-inner">
                       <div className="carousel-item active">
-                        {/* <img
+                        <img
                           src="https://images.unsplash.com/photo-1561877202-53d0e24be55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                           className="d-block w-100"
                           alt="..."
-                        /> */}
+                        />
                         <div
                           className="p-4"
                           style={{
@@ -325,11 +325,11 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="carousel-item ">
-                        {/* <img
+                        <img
                           src="https://images.unsplash.com/photo-1561877202-53d0e24be55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                           className="d-block w-100"
                           alt="..."
-                        /> */}
+                        />
                         <div
                           className="p-4"
                           style={{
@@ -372,11 +372,11 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="carousel-item ">
-                        {/* <img
+                        <img
                           src="https://images.unsplash.com/photo-1561877202-53d0e24be55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                           className="d-block w-100"
                           alt="..."
-                        /> */}
+                        />
                         <div
                           className="p-4"
                           style={{
@@ -429,7 +429,7 @@ const Home = () => {
                         className="carousel-control-prev-icon"
                         aria-hidden="true"
                       ></span>
-                      {/* <span className="sr-only">Previous</span> */}
+                      <span className="sr-only">Previous</span>
                     </a>
                     <a
                       className="carousel-control-next d-none d-md-block"
@@ -442,7 +442,7 @@ const Home = () => {
                         className="carousel-control-next-icon"
                         aria-hidden="true"
                       ></span>
-                      {/* <span className="sr-only">Next</span> */}
+                      <span className="sr-only">Next</span>
                     </a>
                   </div>
                 </div>
@@ -450,7 +450,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* what section  */}
 
@@ -497,8 +497,8 @@ const Home = () => {
                 </p>
                 <div className="mt-5 d-flex align-items-center">
                   <Link
-                    className="h5 text-decoration-none text-light"
-                    to="/terms"
+                    className="h6 text-decoration-none text-light"
+                    to="/terms&conditions"
                   >
                     Terms of Use
                   </Link>
@@ -513,17 +513,38 @@ const Home = () => {
                     }}
                   ></span>
                   <Link
-                    className="h5 text-decoration-none text-light"
+                    className="h6 text-decoration-none text-light"
                     to="/privacy"
                   >
                     Privacy Policy
+                  </Link>
+                  <span
+                    className="mx-4"
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#fff",
+                    }}
+                  ></span>
+                  <Link
+                    className="h6 text-decoration-none text-light"
+                    to="/terms&conditions#refund"
+                  >
+                    Refund Policy
                   </Link>
                 </div>
               </div>
 
               {/* <!--Grid column--> */}
               <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <ul className="list-unstyled mb-0">
+                    <div className="d-flex flex-column gap-4 text-center">
+                      <span>Brief Horoscope Report</span>
+                      <span>Basic Horoscope Report</span>
+                      <span>Premium Horoscope Report</span>
+                      <span>Match-making Horoscope Report</span>
+                    </div>
+                {/* <ul className="list-unstyled mb-0">
                   <GlobalModal
                     link={"Brief Horoscope Report"}
                     title={"Get Your Brief Horoscope Report"}
@@ -540,7 +561,7 @@ const Home = () => {
                     link={"Match-making Horoscope Report"}
                     title={"Get Your Match Making Horoscope Report"}
                   ></GlobalModal>
-                </ul>
+                </ul> */}
               </div>
               {/* <!--Grid column--> */}
 
@@ -585,7 +606,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/astrochalit/">
                       <BsInstagram
                         className="p-2"
                         style={{
@@ -599,7 +620,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/astrochalit">
                       <BsFacebook
                         className="p-2"
                         style={{
@@ -643,7 +664,7 @@ const Home = () => {
                 </ul>
               </div>
               <p>
-                @2022 Poulima Infotech Private Limited. All Rights Reserved.
+                @2023 Poulima Infotech Private Limited. All Rights Reserved.
               </p>
             </div>
           </div>

@@ -13,11 +13,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route
-            path="/terms"
+            path="terms&conditions"
             element={<TermsAndCondition></TermsAndCondition>}
           ></Route>
           <Route
-            path="/privacy"
+            path="privacy"
             element={<PrivacyPolicy></PrivacyPolicy>}
           ></Route>
           <Route path="/payment/:type" element={<Payment></Payment>}></Route>

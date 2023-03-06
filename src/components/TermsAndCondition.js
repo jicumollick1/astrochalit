@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "../assets/WEBP/astrochalit logo-svg.webp";
 
 import hero1 from "../assets/WEBP/VEDIC KUNDLI BOOK TERMS PRIVACY BANNER-svg.webp";
@@ -6,9 +6,14 @@ import hero2 from "../assets/WEBP/TERMS OF USE & PRIVACY BANNER-svg.webp";
 
 const TermsAndCondition = () => {
   // useEffect to go to top
+  const scollToRefund = useRef();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (window.location.hash==='#refund') moveToRefund();
+    else window.scrollTo(0, 0);
   }, []);
+  const moveToRefund = () => {
+    scollToRefund.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div style={{ background: "#F0EAD5" }}>
       {/* navbar section  */}
@@ -42,10 +47,10 @@ const TermsAndCondition = () => {
             <div className=" col-md-6 text-light my-auto">
               <h2 style={{ fontFamily: "Hagatta" }}>Get 50 % OFF </h2>
               <p className="my-4" style={{ fontFamily: "Lora" }}>
-                Get All Your Astrological Data in PDF Format EMAILED to You
-                Within 24 Hours!
+              Download All Your Astrological Data in PDF Format Instantly!
               </p>
               <button
+                onClick={() => window.location.href = "https://www.astrochalit.com/"}
                 className="btn text-light"
                 style={{
                   background: "#E3B773",
@@ -82,13 +87,13 @@ const TermsAndCondition = () => {
         <div className="row">
           <div>
             <h4 className="my-5">
-              Vedic Rishi Astro Solutions Pvt. Ltd Terms of Service ("Terms")
+              Poulima Infotech Pvt. Ltd Terms of Service ("Terms")
             </h4>
-            <p>Last updated: February 10, 2015</p>
+            <p>Last updated: March 1, 2023</p>
             <p>
               Please read these Terms of Service ("Terms", "Terms of Service")
-              carefully before using the http://www.vedicrishiastro.com website
-              (the "Service") operated by Vedic Rishi Astro Solutions Pvt Ltd
+              carefully before using the https://www.poulimainfo.tech/ website
+              (the "Service") operated by Poulima Infotech Pvt Ltd
               ("us", "we", or "our").
             </p>
             <p>
@@ -127,14 +132,14 @@ const TermsAndCondition = () => {
             <h4 className="my-4">Links To Other Web Sites</h4>
             <p>
               Our Service may contain links to third-party web sites or services
-              that are not owned or controlled by Vedic Rishi Astro Solutions
+              that are not owned or controlled by Poulima Infotech
               Pvt Ltd.
             </p>
             <p>
-              Vedic Rishi Astro Solutions Pvt Ltd has no control over, and
+              Poulima Infotech Pvt Ltd has no control over, and
               assumes no responsibility for, the content, privacy policies, or
               practices of any third party web sites or services. You further
-              acknowledge and agree that Vedic Rishi Astro Solutions Pvt Ltd
+              acknowledge and agree that Poulima Infotech Pvt Ltd
               shall not be responsible or liable, directly or indirectly, for
               any damage or loss caused or alleged to be caused by or in
               connection with use of or reliance on any such content, goods or
@@ -207,6 +212,17 @@ const TermsAndCondition = () => {
               become effective, you agree to be bound by the revised terms. If
               you do not agree to the new terms, please stop using the Service.
             </p>
+          </div>
+          <div ref={scollToRefund}>
+            <h4 className="my-4">REFUND & CANCELLATION POLICY</h4>
+            <p>We want you to be delighted with your purchase on our website. If for any reason, you are not satisfied with your purchase, we will gladly provide a refund. Please note that some products or services may have different refund policies, which will be clearly stated on the product or service page.</p>
+            <p>Refunds will be considered only if customers mail us at support@astrochalit.com within 2 hours of payment. No refund shall be entertained after the expiry of two hours from the time of payment. No refund shall be made if the data provided by the customer is incorrect. Once the report is delivered to the customer, no refund shall be made.</p>
+            <p>We will issue refunds for the following circumstances:</p>
+            <ul>
+              <li>The product or service is defective or not working as advertised.</li>
+              <li>The product or service was not delivered as promised.</li>
+              <li>The product or service does not meet your expectations.</li>
+            </ul>
           </div>
           <div>
             <h4 className="my-4">Contact Us</h4>
